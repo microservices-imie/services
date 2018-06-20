@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:microservices-imie/users.git
+	branch = master
+	commit = 01ce9d03f52679686a4ec0c16941d109b05cc97e
+	parent = 7d016dce053e40929a8e8e1262552203c4aaaee9
+	cmdver = 0.3.1
