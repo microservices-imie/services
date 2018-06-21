@@ -6,8 +6,8 @@
 [subrepo]
 	remote = git@github.com:microservices-imie/notifications.git
 	branch = master
-	commit = d5bcddeb788b94a502c7324f4e7ce6483906f92a
-	parent = da8b1e6f1e0a67365b35d54e5e02186cfcb6ebea
+	commit = 7ae0523d7c8cbcdb843578592182a82f2be967e7
+	parent = a9eb81addae3b3451d0cb68b6328085c06eaab90
 	method = merge
 	update = auto
 	cmdver = 0.4.1
