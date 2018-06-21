@@ -20,6 +20,7 @@ jobs:
       - run: git clone https://github.com/ingydotnet/git-subrepo ../git-subrepo
       - run: cd ../git-subrepo && source .rc && echo $GIT_SUBREPO_ROOT && cd ../repo && git subrepo push --all 
       - run: echo $GIT_SUBREPO_ROOT
+      - run: echo $CIRCLE_REPOSITORY_URL && echo $CIRCLE_TAG
       - save_cache:
           paths:
             - node_modules
