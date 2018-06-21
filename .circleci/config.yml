@@ -18,7 +18,9 @@ jobs:
           - v1-dependencies-
 
       - run: git clone https://github.com/ingydotnet/git-subrepo git-subrepo && source $(pwd)/git-subrepo/git.rc && git subrepo clone
-
+      - run: ls
+      - run: cd git-subrepo && ls
+      - run: ls
       - save_cache:
           paths:
             - node_modules
