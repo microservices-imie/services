@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:microservices-imie/notifications.git
+	branch = master
+	commit = d5bcddeb788b94a502c7324f4e7ce6483906f92a
+	parent = da8b1e6f1e0a67365b35d54e5e02186cfcb6ebea
+	method = merge
+	update = auto
+	cmdver = 0.4.1
