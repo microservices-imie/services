@@ -8,7 +8,7 @@ export class AppController {
   constructor(
     private httpService: HttpService,
     private mailerService: MailerService,
-  ) {}
+  ) { }
 
   @MessagePattern('delivery')
   deliverNotification(payload) {
@@ -24,7 +24,7 @@ export class AppController {
         switchMap(options => {
           return this.mailerService.sendMail(options);
         }),
-      )
+    )
       .subscribe(
         success => {
           Logger.log(`Mail sended to userId ${userId} `);
@@ -34,12 +34,12 @@ export class AppController {
           Logger.error(`Error to send mail to ${userId} `, error.toString());
           sendMail$.unsubscribe();
         },
-      );
+    );
   }
 
   @MessagePattern('newCommand')
   newCommandNotification() {
-    console.log('newCommand');
+    Logger.log('newCommand');
   }
 }
 
@@ -50,9 +50,9 @@ function createMailOptions(user, tracking) {
     subject: `Your package ${tracking.name} is now in ${tracking.location}`,
     text: `Hi ${user.firstname} \n Your package ${tracking.name} is now in ${
       tracking.location
-    }`,
+      }`,
     html: `Hi ${user.firstname} <br> Your package ${tracking.name} is now in ${
       tracking.location
-    }`,
+      }`,
   };
 }
