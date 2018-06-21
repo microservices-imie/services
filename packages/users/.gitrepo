@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:microservices-imie/users.git
 	branch = master
-	commit = 7f021ccfbb972c880f8b76d303d355039efebbd8
-	parent = bae480793606b07b3950941adbe7e41ac1c15093
+	commit = 369967303540987f697361b9bd9aa1eadff87474
+	parent = e22411232b04343e4eadebb75c8065daed9099c4
 	cmdver = 0.3.1
