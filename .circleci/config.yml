@@ -8,6 +8,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - run: echo 'Host github.com\n   StrictHostKeyChecking no' > ~/.ssh/config
       - run: git clone https://github.com/microservices-imie/services .
       - run: git clone https://github.com/ingydotnet/git-subrepo ../git-subrepo
       - run: cd ../git-subrepo && source .rc && echo $GIT_SUBREPO_ROOT && cd ../repo && git subrepo push --all 
