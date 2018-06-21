@@ -4,7 +4,7 @@ import { RabbitMQReceiver } from '_rabbit-mq/rabbitmq.receiver';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, {
-    strategy: new RabbitMQReceiver('amqp://localhost', 'channel'),
+    strategy: new RabbitMQReceiver('amqp://rabbitmq', 'channel'),
   });
 
   app.listen(() => ``);

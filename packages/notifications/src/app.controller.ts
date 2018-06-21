@@ -16,7 +16,7 @@ export class AppController {
     const tracking = payload.tracking;
 
     const sendMail$ = this.httpService
-      .get(`http://localhost:3000/users/${userId}`)
+      .get(`http://users:3000/users/${userId}`)
       .pipe(
         map(user => {
           return createMailOptions(user.data, tracking);

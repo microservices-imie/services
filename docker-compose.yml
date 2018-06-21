@@ -3,15 +3,15 @@ services:
   users:
     build:
       context: ./packages/users
-      dockerfile: .
+      dockerfile: dev.Dockerfile
     ports:
       - 3000:3000
     depends_on:
       - mongodb
   notifications:
     build:
-      context: ./packages/users
-      dockerfile: .
+      context: ./packages/notifications
+      dockerfile: dev.Dockerfile
     depends_on:
       - rabbitmq
   rabbitmq:
@@ -24,6 +24,8 @@ services:
     image: mongo:latest
     container_name: "mongodb"
     volumes:
-      - ./data/db:/data/db
+      - dataDb:/data/db
     ports:
       - 27017:27017
+volumes:
+  dataDb:

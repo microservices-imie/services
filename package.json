@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"stack:dev": "docker-compose --file docker-compose.yml up --build"
+	},
 	"devDependencies": {
 		"lerna": "^2.11.0"
 	}
