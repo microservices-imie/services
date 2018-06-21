@@ -17,7 +17,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: git clone https://github.com/ingydotnet/git-subrepo git-subrepo && source $(pwd)/git-subrepo/git.rc && git subrepo clone
+      - run: git clone https://github.com/ingydotnet/git-subrepo git-subrepo
       - run: ls
       - run: cd git-subrepo && ls
       - run: ls
