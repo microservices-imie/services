@@ -8,20 +8,5 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: echo $GIT_SUBREPO_ROOT
-      - run: echo $CIRCLE_REPOSITORY_URL && echo $CIRCLE_TAG
       - run: git clone https://github.com/ingydotnet/git-subrepo ../git-subrepo
       - run: cd ../git-subrepo && source .rc && echo $GIT_SUBREPO_ROOT && cd ../repo && git subrepo push --all 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
