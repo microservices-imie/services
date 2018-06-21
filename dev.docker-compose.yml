@@ -3,17 +3,21 @@ services:
   users:
     build:
       context: ./packages/users
-      dockerfile: Dockerfile
+      dockerfile: dev.Dockerfile
     ports:
       - 3000:3000
     depends_on:
       - mongodb
+    volumes:
+      - ./packages/users/src:/src
   notifications:
     build:
       context: ./packages/notifications
-      dockerfile: Dockerfile
+      dockerfile: dev.Dockerfile
     depends_on:
       - rabbitmq
+    volumes:
+      - ./packages/notifications/src:/src
   rabbitmq:
     image: rabbitmq:3-management
     container_name: "rabbitmq"

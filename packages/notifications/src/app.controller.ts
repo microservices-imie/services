@@ -31,7 +31,7 @@ export class AppController {
           sendMail$.unsubscribe();
         },
         error => {
-          Logger.error(`Error to send mail to ${userId} `, error.toString());
+          Logger.error(`Error sending mail to ${userId} `, error.toString());
           sendMail$.unsubscribe();
         },
     );
